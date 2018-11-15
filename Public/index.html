@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CHAT</title>
+        <link rel="stylesheet" type="text/css" href="Style.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+        <script type="text/javascript" src="cliente.js"></script>
+    </head>
+    <body>
+    <div class="inicio" id="inicioId">
+        <div class="card">
+            <h1 class="titulo">Bem-Vindo ao Chat!</h1>
+        <div class="chatform inic">
+            <p>Digite seu nome:</p>
+            <textarea id="AreaEntra"></textarea>
+            <button id="btnEntra">Entrar</button>
+        </div>
+    </div>
+    </div>
+    <div class="row" id="rowId">
+        <div class="Usuarios">
+            <div class="card">
+            <h1>Usuários Online:</h1>
+            <ul id="UsuariosOn">
+                <li>Itallo</li>
+                <li>Jaqueline</li>
+            </ul>
+        </div>
+        </div>
+        <div class="Chat">
+            <div class="card">
+            <div class="chatbox" id="chatId">
+            </div>
+            <div class="chatform">
+                <textarea id="AreaMsg"></textarea>
+                <button id="btnMSg">Mandar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    </body>
+</html>
