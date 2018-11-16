@@ -1,5 +1,5 @@
 
-const socket = io.connect('http://192.168.25.5:3000');
+const socket = io.connect('http://localhost:3000');
 
 socket.on('msgRecebido',funcaoRecebido);
 socket.on('UpdateUsuarios',Updateusuarios);
