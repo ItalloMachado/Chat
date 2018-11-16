@@ -4,7 +4,7 @@ Projeto de um Chat, utilizando Node.js.
 Para executar o servidor:
 1. Clone o repositório nesse GitHub.
 2. Precisa do node.js instalado na máquina. (https://nodejs.org/en/);
-3. Após instala o nodeJs, executa o prompt de comando e ir até o a diretório do Chat.
+3. Após instala o nodeJs, executa o prompt de comando e ir até o diretório do Chat.
 4. No diretório execute o comando "npm install" para instalar as bibliotecas necessárias do aplicação.
 5. executa o comando "npm start" ou "node server.js".
 
