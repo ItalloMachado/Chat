@@ -44,7 +44,7 @@ body{
 .card ul{
     padding: 10px;
     list-style-type: none;
-    overflow: auto;
+    
 }
 .card li{
     padding: 5px 0;
@@ -149,14 +149,20 @@ body{
 }
 @media screen and (max-width:830px){
     .Usuarios{
-        /*display: none;*/
         width: 100%;
+    }
+    .card ul{
+        overflow: auto;
+        height: 100px;
+    }
+    .card li{
+        display: inline-block;
+        padding:  5px 10px;
     }
     .Chat{
         width: 100%;
     }
 }
-
 
 @media screen and (max-width:515px){
 
@@ -167,5 +173,4 @@ body{
 .inicio{
     width: 100%;
 }
-
-}     
+}    
