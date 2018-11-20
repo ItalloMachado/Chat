@@ -104,13 +104,16 @@ body{
     background: #fff;
 }
 
-.chatform textarea::-webkit-scrollbar{
+::-webkit-scrollbar{
     width: 10px;
 }
 
-.chatform textarea::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb{
     border-radius: 5px;
     background: rgba(0,0,0,.1);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: rgba(0,0,0,.5);
 }
 
 .chatform button{
@@ -145,8 +148,10 @@ body{
 }
 .inic p{
     padding: 0 0 10px 0;
-
 }
+
+
+
 @media screen and (max-width:830px){
     .Usuarios{
         width: 100%;
@@ -173,4 +178,4 @@ body{
 .inicio{
     width: 100%;
 }
-}    
+}
