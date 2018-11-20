@@ -6,6 +6,7 @@ socket.on('msgRecebido',funcaoRecebido);//Escuta de mensagens do servidor
 socket.on('UpdateUsuarios',Updateusuarios);//Escuta de atualização dos usuários, informada pelo servidor
 var MeuNome='';// o nome do cliente conectado
 //Função que atualiza a lista de usuários online.
+
 function Updateusuarios(data){
     var html ='';// variável auxiliar.
     for (i=0;i<data.length;i++){
@@ -15,8 +16,10 @@ function Updateusuarios(data){
 }
 //Função que escreve no arquivo html a mensagem recebida do servidor
 function funcaoRecebido(data){
-    $("#chatId").append('<div class="mensagem amigo"><div class="Nome"><h1>'+data.nome+'</h1></div><p class="msg-chat">'+data.msg+'</p></div>');
-}
+     $("#chatId").append('<div class="mensagem amigo"><div class="Nome"><h1>'+data.nome+'</h1></div><p class="msg-chat">'+data.msg+'</p></div>');
+    var elem=document.getElementById('chatId');
+    elem.scrollTop=elem.scrollHeight;// descer o scroll até o final da barra.
+   }
 $(document).ready(function(){
     //função ativa quando se clica???? o botão de mandar mensagem.
     $("#btnMSg").click(function(){
@@ -24,6 +27,8 @@ $(document).ready(function(){
             var $mensagem=$('#AreaMsg');
             socket.emit('msg',$('#AreaMsg').val());//envia a mensagem para o servidor.
             $("#chatId").append('<div class="mensagem eu"><div class="Nome"><h1>'+MeuNome+'</h1></div><p class="msg-chat">'+$('#AreaMsg').val()+'</p></div>');
+            var elem=document.getElementById('chatId');
+            elem.scrollTop=elem.scrollHeight; // descer o scroll até o final da barra.
             document.getElementById('AreaMsg').value = "";
         }
     });
@@ -40,3 +45,5 @@ $(document).ready(function(){
     document.getElementById('rowId').style.display="block";// ativa a pagina do chat.
     });
 });
+
+
